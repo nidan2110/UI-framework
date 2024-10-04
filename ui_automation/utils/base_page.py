@@ -12,3 +12,9 @@ class BasePage:
 
     def click_element(self, locator):
         self.find_element(locator).click()
+
+    # def is_displayed(self, locator):
+    #     try:
+    #         return self.driver.find_element(locator).is_displayed()
+    #     except NotImplementedError:
+    #         return False

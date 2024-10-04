@@ -11,3 +11,7 @@ class HomePage(BasePage):
 
     def is_featured_product_displayed(self):
         return len(self.driver.find_elements(*HomePageLocators.FEATURED_PRODUCTS)) > 0
+    
+
+    # def logo_is_displayed(self):
+    #     return self.is_displayed(*HomePageLocators.LOGO)

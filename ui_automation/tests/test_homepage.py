@@ -11,3 +11,7 @@ class TestHomePage:
     def test_featured_products_displayed(self):
         home_page = HomePage(self.driver)
         assert home_page.is_featured_product_displayed()
+
+    # def test_logo_is_displayed(self):
+    #     home_page = HomePage(self.driver)
+    #     assert home_page.logo_is_displayed()
