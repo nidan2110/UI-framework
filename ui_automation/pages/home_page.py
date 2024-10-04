@@ -13,5 +13,14 @@ class HomePage(BasePage):
         return len(self.driver.find_elements(*HomePageLocators.FEATURED_PRODUCTS)) > 0
     
 
-    # def logo_is_displayed(self):
-    #     return self.is_displayed(*HomePageLocators.LOGO)
+    def image_is_displayed(self):
+        return self.is_displayed(*HomePageLocators.LOGO)
+    
+    def cart_btn_working(self):
+        try:
+            cart_btn = self.driver.find_element(*HomePageLocators.CART_BTN)
+            cart_btn.click()
+            return True
+        except Exception as e:
+            print(f"Error clicking cart buton {e}")
+            return False
