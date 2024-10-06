@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r'D:\UI_framework\ui_automation')
 from utils.base_page import BasePage
 from locators.locators import HomePageLocators
 
@@ -24,3 +26,20 @@ class HomePage(BasePage):
         except Exception as e:
             print(f"Error clicking cart buton {e}")
             return False
+        
+
+    def carousel_displayed(self):
+        return self.is_displayed(*HomePageLocators.CAROUSEL)
+    
+    def get_carousel_items(self):
+        return self.driver.find_elements(*HomePageLocators.CAROUSEL_ITEMS)
+    
+    # def slide_carousel(self):
+    #     try:
+    #         next_btn = self.driver.find_element(By.CSS_SELECTOR, "div.swiper-slide text-center swiper-slide-duplicate-active")
+    #         next_btn.click()
+    #         return True
+    #     except Exception as e:
+    #         print(f"Error sliding carousel: {e}")
+    #         return False
+        

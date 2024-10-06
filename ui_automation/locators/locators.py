@@ -7,3 +7,6 @@ class HomePageLocators:
     NAVIGATION_MENU = (By.CSS_SELECTOR, "ul.nav.navbar-nav > li > a")
     LOGO = (By.CSS_SELECTOR, "img.img-responsive")
     CART_BTN = (By.ID, "cart")
+    CAROUSEL = (By.ID,"div.slideshow swiper-viewport")
+    CAROUSEL_ITEMS = (By.ID, "slideshow0")
+    

@@ -30,3 +30,13 @@ class BasePage:
             return element.is_clickable()
         except:
             False
+
+    def is_carousel_displayed(self, locator):
+        try:
+            WebDriverWait(self.driver, 10).until(
+                EC.visibility_of_element_located(locator)
+            )
+            return True
+        except Exception as e:
+            print(f"Error checking carousel visibility: {e}")
+            return False

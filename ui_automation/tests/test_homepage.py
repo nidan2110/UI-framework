@@ -31,3 +31,26 @@ class TestHomePage:
         """
         home_page = HomePage(self.driver)
         assert home_page.cart_btn_working()
+    
+    @pytest.mark.xfail
+    def test_carousel_is_displayed(self):
+        """
+        Test to check whether the carousel is visible"""
+        home_page = HomePage(self.driver)
+        print(f'carousal:{home_page.get_carousel_items}')
+        assert home_page.get_carousel_items() == True, "Carousel is not displayed!"
+        print("Current URL:", self.driver.current_url)
+        print("Page Source:", self.driver.page_source)
+
+
+    # def test_carousel_items_visible(self):
+    #     home_page = HomePage(self.driver)
+    #     items = home_page.get_carousel_items()
+    #     assert len(items) > 0, "No carousel items are visible!"
+    #     for item in items:
+    #         assert item.is_displayed(), "Carousel item is not displayed!"
+
+    # def test_slide_carousel(self):
+    #     home_page = HomePage(self.driver)
+    #     assert home_page.slide_carousel(), "Failed to slide the carousel!"
+    
