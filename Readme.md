@@ -1,14 +1,37 @@
 
-#**UI Automation Framework**
-This repository contains a Selenium-based UI automation framework built with Python and Pytest. It is designed to automate web testing and generate HTML reports for easy analysis of test results.
+# UI Automation Framework
 
-##**Features**
-Browser Support: Currently supports Chrome (can be extended for other browsers).
-Pytest Integration: Leverages Pytest for running tests and generating detailed HTML reports.
-Fixtures: Utilizes Pytest fixtures for setting up and tearing down browser sessions.
-Parallel Execution: Supports running tests in parallel for faster execution.
-Test Reports: Generates HTML reports with detailed test results.
-Screenshots: Captures screenshots for failed test cases.
-CI/CD Integration: Easily integrable with Jenkins for continuous testing and reporting.
+## Project Overview
 
-##**Project Structure**
+This project contains a UI Automation Framework built using Python, Selenium, and Pytest. It is designed to automate test cases for the [OpenCart Demo Site](https://naveenautomationlabs.com/opencart/index.php?route=common/home).
+
+---
+
+## Features
+
+- **Cross-browser testing** with Selenium WebDriver.
+- **Page Object Model (POM)** design pattern for scalable and maintainable test code.
+- **Pytest** integration for running and managing test cases.
+- Automatic **HTML reporting**.
+- **Screenshots** captured for failed tests.
+- Parallel test execution using **pytest-xdist**.
+
+---
+
+## Project Structure
+
+```bash
+root
+│
+├─── ui_automation
+│    ├─── tests               # Test cases
+│    ├─── pages               # Page Object Model classes
+│    ├─── reports             # HTML test reports
+│    └─── screenshots         # Captured screenshots
+│
+├─── venv                     # Python virtual environment
+│
+├─── requirements.txt          # Project dependencies
+│
+└─── pytest.ini                # Pytest configurations
+
