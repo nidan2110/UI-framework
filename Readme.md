@@ -31,8 +31,8 @@ root
 │    ├─── pages               # Page Object Model classes
 │    ├─── reports             # HTML test reports
 │    ├─── utils               # Utils 
-│    |─── screenshots         # Captured screenshots
-│    |─── requirements.txt    # Project dependencies
+│    ├─── screenshots         # Captured screenshots
+│    ├─── requirements.txt    # Project dependencies
 │    └─── pytest.ini          # Pytest configurations
-|
+
 
