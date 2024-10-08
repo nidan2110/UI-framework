@@ -34,12 +34,23 @@ class HomePage(BasePage):
     def get_carousel_items(self):
         return self.driver.find_elements(*HomePageLocators.CAROUSEL_ITEMS)
     
-    # def slide_carousel(self):
-    #     try:
-    #         next_btn = self.driver.find_element(By.CSS_SELECTOR, "div.swiper-slide text-center swiper-slide-duplicate-active")
-    #         next_btn.click()
-    #         return True
-    #     except Exception as e:
-    #         print(f"Error sliding carousel: {e}")
-    #         return False
+    def slide_carousel(self):
+        try:
+            next_btn = self.driver.find_element(*HomePageLocators.CAROUSEL_NEXT_BTN)
+            next_btn.click()
+            prev_btn = self.driver.find_element(*HomePageLocators.CAROUSEL_PREV_BTN)
+            prev_btn.click()
+            return True
+        except Exception as e:
+            print(f"Error sliding carousel: {e}")
+            return False
         
+    # def brand_logos_displayed(self):
+    #     return len(self.driver.find_elements(*HomePageLocators.BRAND_LOGOS))  == 11
+        # try:
+        #     return len(self.driver.find_elements(*HomePage.brand_logos_displayed()))  == 11
+        #     # logos = self.driver.find_elements(*HomePage.brand_logos_displayed()).items()
+        #     # print(logos)
+        # except Exception as e:
+        #     print(f"Exception:{e}")
+        #     return False

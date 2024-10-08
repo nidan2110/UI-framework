@@ -9,4 +9,6 @@ class HomePageLocators:
     CART_BTN = (By.ID, "cart")
     CAROUSEL = (By.ID,"div.slideshow swiper-viewport")
     CAROUSEL_ITEMS = (By.ID, "slideshow0")
-    
+    CAROUSEL_NEXT_BTN = (By.CLASS_NAME, "swiper-button-next")
+    CAROUSEL_PREV_BTN = (By.CLASS_NAME, "swiper-button-prev")
+    BRAND_LOGOS = (By.CSS_SELECTOR, "div.carousel swiper-viewport")

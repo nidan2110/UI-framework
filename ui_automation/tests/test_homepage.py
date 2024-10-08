@@ -11,6 +11,8 @@ class TestHomePage:
         home_page.search_product("iPhone")
         assert "Search - iPhone" in self.driver.title
 
+        self.driver.refresh()
+
     def test_featured_products_displayed(self):
         """
         Test to check if the product are displayed
@@ -33,6 +35,7 @@ class TestHomePage:
         assert home_page.cart_btn_working()
     
     @pytest.mark.xfail
+    @pytest.mark.usefixtures("setup_fresh_browser")
     def test_carousel_is_displayed(self):
         """
         Test to check whether the carousel is visible"""
@@ -50,7 +53,13 @@ class TestHomePage:
     #     for item in items:
     #         assert item.is_displayed(), "Carousel item is not displayed!"
 
-    # def test_slide_carousel(self):
+    @pytest.mark.usefixtures("setup_fresh_browser")
+    def test_carousel_navigation(self):
+        home_page = HomePage(self.driver)
+        assert home_page.slide_carousel(), "Failed to slide the carousel!"
+
+    # @pytest.mark.usefixtures("setup_fresh_browser")
+    # def test_brand_logos_displayed(self):
     #     home_page = HomePage(self.driver)
-    #     assert home_page.slide_carousel(), "Failed to slide the carousel!"
+    #     assert home_page.brand_logos_displayed(), "Brand Logos not displayed"
     
