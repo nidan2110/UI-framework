@@ -24,14 +24,15 @@ This project contains a UI Automation Framework built using Python, Selenium, an
 root
 │
 ├─── ui_automation
+│    ├─── config              # Config for the Tests
+│    ├─── data                # Includes data about user and product
+│    ├─── locator             # Locators for different pages
 │    ├─── tests               # Test cases
 │    ├─── pages               # Page Object Model classes
 │    ├─── reports             # HTML test reports
-│    └─── screenshots         # Captured screenshots
-│
-├─── venv                     # Python virtual environment
-│
-├─── requirements.txt          # Project dependencies
-│
-└─── pytest.ini                # Pytest configurations
+│    ├─── utils               # Utils 
+│    |─── screenshots         # Captured screenshots
+│    |─── requirements.txt    # Project dependencies
+│    └─── pytest.ini          # Pytest configurations
+|
 
