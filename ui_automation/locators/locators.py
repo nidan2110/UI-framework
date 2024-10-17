@@ -12,3 +12,4 @@ class HomePageLocators:
     CAROUSEL_NEXT_BTN = (By.CLASS_NAME, "swiper-button-next")
     CAROUSEL_PREV_BTN = (By.CLASS_NAME, "swiper-button-prev")
     BRAND_LOGOS = (By.CSS_SELECTOR, "div.carousel swiper-viewport")
+    ADD_TO_CART_BTN = (By.NAME,"Add to Cart")

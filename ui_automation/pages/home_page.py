@@ -11,6 +11,14 @@ class HomePage(BasePage):
         self.find_element(HomePageLocators.SEARCH_BAR).send_keys(product_name)
         self.click_element(HomePageLocators.SEARCH_BUTTON)
 
+    def add_first_product_to_cart(self):
+        try:
+            add_to_cart_btn = self.find_element(*HomePageLocators.ADD_TO_CART_BTN)
+            add_to_cart_btn.click()
+        except Exception as e:
+            print(f"Error clicking cart buton {e}")
+            return False
+
     def is_featured_product_displayed(self):
         return len(self.driver.find_elements(*HomePageLocators.FEATURED_PRODUCTS)) > 0
     
